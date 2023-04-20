@@ -11,4 +11,11 @@ body {
   p {
     color: red;
   }
+
+  .flex-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+  }
   
