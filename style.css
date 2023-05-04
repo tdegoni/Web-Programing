@@ -1,40 +1,96 @@
-* {border-style: solid;
+* {
   background-color: rgba(243, 240, 242, 1)
     ;}
 
-    .container {  display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
-      gap: 12px 12px;
-      
+    .container {  display: grid;   /* Config de Conteiner padre*/
+      grid-template-columns: 1fr 1fr 0.7fr 1.3fr;
+      grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "Header Header Header Header"
+        "Fila-1 Fila-1 Fila-1 Texto-1"
+        "Texto-2 Fila-2 Fila-2 Fila-2"
+        "Fila-3 Fila-3 Fila-3 Texto-3"
+        "Texto-4 Fila-4 Fila-4 Fila-4"
+        "Footer Footer Footer Footer";
+        gap: 12px 12px;
     }
     
-    .Header { grid-area: 1 / 1 / 2 / 5; }
-       
-    .Fila-1 { grid-area: 2 / 1 / 3 / 4; 
-      
-      align-self: center; 
+    .Texto-1 {
+      justify-self: center;
+      align-self: center;
+      grid-area: Texto-1;
+      font-family: 'Cormorant', serif;
     }
     
-    .Texto-1 { grid-area: 2 / 4 / 3 / 5; 
-      color: rgba(30, 50, 121, 1);
+    .Fila-2 {
+      justify-self: end;
+      grid-area: Fila-2;
     }
     
-    .Fila-2 { grid-area: 3 / 2 / 4 / 5;
-      width: auto;
-      height: auto;  }
+    .Texto-2 {
+      justify-self: center;
+      align-self: center;
+      grid-area: Texto-2;
+      font-family: 'Cormorant', serif;
+    }
     
-    .Texto-2 { grid-area: 3 / 1 / 4 / 2;
-      font-family: "Times New Roman", Times, serif; }
+    .Fila-3 {
+      justify-self: start;
+      align-self: center;
+      grid-area: Fila-3;
+    }
     
-    .Fila-3 { grid-area: 4 / 1 / 5 / 4; }
+    .Texto-3 {
+      justify-self: center;
+      align-self: center;
+      grid-area: Texto-3;
+      font-family: 'Cormorant', serif;
+    }
     
-    .Texto-3 { grid-area: 4 / 4 / 5 / 5; }
+    .Fila-4 {
+      justify-self: end;
+      grid-area: Fila-4;
+    }
     
-    .Fila-4 { grid-area: 5 / 2 / 6 / 5; }
+    .Texto-4 {
+      justify-self: center;
+      align-self: center;
+      grid-area: Texto-4;
+      font-family: 'Cormorant', serif;
+    }
     
-    .Texto-4 { grid-area: 5 / 1 / 6 / 2; }
+    .Footer {
+      justify-self: center;
+      align-self: center;
+      grid-area: Footer;
+      font-family: 'Cormorant', serif;
+    }
     
-    .Footer { grid-area: 6 / 1 / 7 / 5; }
+    .Fila-1 {
+      justify-self: start;
+      align-self: center;
+      grid-area: Fila-1;
+    }
     
-  
+    .Header {
+      justify-self: center;
+      align-self: center;
+      grid-area: Header;
+    }
+    
+
+    /* Estilo del título */
+    .Header h1{
+      font-size: 2.5rem; /* Tamaño de fuente de 2.5 "rem" */
+      font-family: "Cinzel", sans-serif; /* Tipo de letra */
+      margin-bottom: 0.5rem; /* Espaciado inferior */
+    }
+ 
+    /* Estilo del eslogan */
+    .Header p {
+      font-size: 1.5rem; /* Tamaño de fuente de 1.5 "rem" */
+      font-family: 'Cormorant', serif;; /* Tipo de letra */
+      line-height: 1.2; /* Espaciado entre líneas */
+    }
