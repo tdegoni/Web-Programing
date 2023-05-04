@@ -1,6 +1,26 @@
 * {
-  background-color: rgba(243, 240, 242, 1)
+  background-color: rgba(243, 240, 242, 1);
+  
     ;}
+
+    :root{
+      font-size: 20px;
+    }
+    @media only screen and (max-width: 600px) {
+      .fila {
+        width: 100%;
+        position: relative;
+      }
+      .texto {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+      .fila:hover .texto {
+        display: block;
+      }
+    }
 
     .container {  display: grid;   /* Config de Conteiner padre*/
       grid-template-columns: 1fr 1fr 0.7fr 1.3fr;
@@ -22,6 +42,9 @@
       align-self: center;
       grid-area: Texto-1;
       font-family: 'Cormorant', serif;
+      font-size: 1.15rem;
+      
+      /*background-color: rgb(114, 47, 55);*/
     }
     
     .Fila-2 {
@@ -50,7 +73,11 @@
     }
     
     .Fila-4 {
-      justify-self: end;
+      object-fit: scale-down;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+      object-position: center; /* Centra la imagen en el contenedor */
       grid-area: Fila-4;
     }
     
@@ -69,9 +96,9 @@
     }
     
     .Fila-1 {
-      justify-self: start;
+      justify-self: center;
       align-self: center;
-      grid-area: Fila-1;
+      grid-area: Fila-1;          
     }
     
     .Header {
@@ -90,7 +117,29 @@
  
     /* Estilo del eslogan */
     .Header p {
-      font-size: 1.5rem; /* Tamaño de fuente de 1.5 "rem" */
+      font-size: 1.8rem; /* Tamaño de fuente de 1.5 "rem" */
       font-family: 'Cormorant', serif;; /* Tipo de letra */
       line-height: 1.2; /* Espaciado entre líneas */
+    }
+
+    .Fila-4 img{
+      max-width: 100%; /* La imagen nunca será más ancha que el contenedor */
+    	height: auto; /* La altura se ajustará automáticamente proporcionalmente a la anchura */
+      display: block; /* Asegura que la imagen se muestra como bloque y no afecta la disposición de otros elementos */
+    }
+
+    .Fila-3 img{
+      max-width: 100%; /* La imagen nunca será más ancha que el contenedor */
+    	height: auto; /* La altura se ajustará automáticamente proporcionalmente a la anchura */
+      display: block; /* Asegura que la imagen se muestra como bloque y no afecta la disposición de otros elementos */
+    }
+    .Fila-2 img{
+      max-width: 100%; /* La imagen nunca será más ancha que el contenedor */
+    	height: auto; /* La altura se ajustará automáticamente proporcionalmente a la anchura */
+      display: block; /* Asegura que la imagen se muestra como bloque y no afecta la disposición de otros elementos */
+    }
+    .Fila-1 img{
+      max-width: 100%; /* La imagen nunca será más ancha que el contenedor */
+    	height: auto; /* La altura se ajustará automáticamente proporcionalmente a la anchura */
+      display: block; /* Asegura que la imagen se muestra como bloque y no afecta la disposición de otros elementos */
     }
