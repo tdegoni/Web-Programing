@@ -43,6 +43,8 @@
       grid-area: Texto-1;
       font-family: 'Cormorant', serif;
       font-size: 1.15rem;
+      text-align: center;
+      vertical-align: middle;
       
       /*background-color: rgb(114, 47, 55);*/
     }
@@ -57,6 +59,9 @@
       align-self: center;
       grid-area: Texto-2;
       font-family: 'Cormorant', serif;
+      text-align: center;
+      vertical-align: middle;
+
     }
     
     .Fila-3 {
@@ -70,6 +75,9 @@
       align-self: center;
       grid-area: Texto-3;
       font-family: 'Cormorant', serif;
+      text-align: center;
+      vertical-align: middle;
+
     }
     
     .Fila-4 {
@@ -86,6 +94,9 @@
       align-self: center;
       grid-area: Texto-4;
       font-family: 'Cormorant', serif;
+      text-align: center;
+      vertical-align: middle;
+
     }
     
     .Footer {
@@ -93,6 +104,8 @@
       align-self: center;
       grid-area: Footer;
       font-family: 'Cormorant', serif;
+      text-align: center;
+      vertical-align: middle;
     }
     
     .Fila-1 {
@@ -113,6 +126,7 @@
       font-size: 2.5rem; /* Tamaño de fuente de 2.5 "rem" */
       font-family: "Cinzel", sans-serif; /* Tipo de letra */
       margin-bottom: 0.5rem; /* Espaciado inferior */
+      text-align: center;
     }
  
     /* Estilo del eslogan */
@@ -143,3 +157,5 @@
     	height: auto; /* La altura se ajustará automáticamente proporcionalmente a la anchura */
       display: block; /* Asegura que la imagen se muestra como bloque y no afecta la disposición de otros elementos */
     }
+
+    
