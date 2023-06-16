@@ -6,22 +6,7 @@
     :root{
       font-size: 20px;
     }
-    @media only screen and (max-width: 600px) {
-      .fila {
-        width: 100%;
-        position: relative;
-      }
-      .texto {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: none;
-      }
-      .fila:hover .texto {
-        display: block;
-      }
-    }
-
+    
     .container {  display: grid;   /* Config de Conteiner padre*/
       grid-template-columns: 1fr 1fr 0.7fr 1.3fr;
       grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
@@ -35,6 +20,7 @@
         "Texto-4 Fila-4 Fila-4 Fila-4"
         "Footer Footer Footer Footer";
         gap: 12px 12px;
+        background-color: black;
     }
     
     .Texto-1 {
@@ -45,14 +31,15 @@
       font-size: 1.15rem;
       text-align: center;
       vertical-align: middle;
+      background-color: black;
       
       /*background-color: rgb(114, 47, 55);*/
     }
     
     .Fila-2 {
       justify-self: end;
-      grid-area: Fila-2;
-    }
+      grid-area: Fila-2;   
+      }
     
     .Texto-2 {
       justify-self: center;
@@ -158,4 +145,20 @@
       display: block; /* Asegura que la imagen se muestra como bloque y no afecta la disposición de otros elementos */
     }
 
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      z-index: 9999;
+      display: none; /* Por defecto, la notificación estará oculta */
+    }
+    
+    .toast.show {
+      display: block; /* Muestra la notificación cuando tiene la clase 'show' */
+    }
     
