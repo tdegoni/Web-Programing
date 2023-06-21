@@ -7,23 +7,49 @@
       font-size: 20px;
     }
     
-    .container {  display: grid;   /* Config de Conteiner padre*/
+    .container {
+      display: grid;
       grid-template-columns: 1fr 1fr 0.7fr 1.3fr;
       grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
       gap: 0px 0px;
       grid-auto-flow: row;
       grid-template-areas:
-        "Header Header Header Header"
-        "Fila-1 Fila-1 Fila-1 Texto-1"
-        "Texto-2 Fila-2 Fila-2 Fila-2"
-        "Fila-3 Fila-3 Fila-3 Texto-3"
-        "Texto-4 Fila-4 Fila-4 Fila-4"
-        "Footer Footer Footer Footer";
-        gap: 12px 12px;
-        background-color: black;
+        "fila-1 fila-1 fila-1 fila-1"
+        "fila-2 fila-2 fila-2 fila-2"
+        "fila-3 fila-3 fila-3 fila-3"
+        "fila-4 fila-4 fila-4 fila-4"
+        "fila-5 fila-5 fila-5 fila-5"
+        "fila-6 fila-6 fila-6 fila-6";
     }
     
-    .Texto-1 {
+    .container > div[id^="fila-"] {
+      justify-self: center;
+      align-self: center;
+      font-family: 'Cormorant', serif;
+      text-align: center;
+      vertical-align: middle;
+    }
+    
+    /* Estilos específicos para cada fila */
+    #fila-1 {
+      grid-area: fila-1;
+    }
+    
+    #fila-2 {
+      grid-area: fila-2;
+    }
+    
+    #fila-3 {
+      grid-area: fila-3;
+    }
+    
+    #fila-4 {
+      grid-area: fila-4;
+    }
+    
+    
+    
+    /*.Texto-1 {
       justify-self: center;
       align-self: center;
       grid-area: Texto-1;
@@ -31,9 +57,8 @@
       font-size: 1.15rem;
       text-align: center;
       vertical-align: middle;
-      background-color: black;
       
-      /*background-color: rgb(114, 47, 55);*/
+      background-color: rgb(114, 47, 55);
     }
     
     .Fila-2 {
@@ -71,8 +96,8 @@
       object-fit: scale-down;
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
-      object-position: center; /* Centra la imagen en el contenedor */
+      object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor 
+      object-position: center; Centra la imagen en el contenedor 
       grid-area: Fila-4;
     }
     
@@ -107,9 +132,10 @@
       grid-area: Header;
     }
     
+    
 
     /* Estilo del título */
-    .Header h1{
+    .Fila h1{
       font-size: 2.5rem; /* Tamaño de fuente de 2.5 "rem" */
       font-family: "Cinzel", sans-serif; /* Tipo de letra */
       margin-bottom: 0.5rem; /* Espaciado inferior */
@@ -117,29 +143,13 @@
     }
  
     /* Estilo del eslogan */
-    .Header p {
+    .Fila p {
       font-size: 1.8rem; /* Tamaño de fuente de 1.5 "rem" */
       font-family: 'Cormorant', serif;; /* Tipo de letra */
       line-height: 1.2; /* Espaciado entre líneas */
     }
 
-    .Fila-4 img{
-      max-width: 100%; /* La imagen nunca será más ancha que el contenedor */
-    	height: auto; /* La altura se ajustará automáticamente proporcionalmente a la anchura */
-      display: block; /* Asegura que la imagen se muestra como bloque y no afecta la disposición de otros elementos */
-    }
-
-    .Fila-3 img{
-      max-width: 100%; /* La imagen nunca será más ancha que el contenedor */
-    	height: auto; /* La altura se ajustará automáticamente proporcionalmente a la anchura */
-      display: block; /* Asegura que la imagen se muestra como bloque y no afecta la disposición de otros elementos */
-    }
-    .Fila-2 img{
-      max-width: 100%; /* La imagen nunca será más ancha que el contenedor */
-    	height: auto; /* La altura se ajustará automáticamente proporcionalmente a la anchura */
-      display: block; /* Asegura que la imagen se muestra como bloque y no afecta la disposición de otros elementos */
-    }
-    .Fila-1 img{
+    .Fila img{
       max-width: 100%; /* La imagen nunca será más ancha que el contenedor */
     	height: auto; /* La altura se ajustará automáticamente proporcionalmente a la anchura */
       display: block; /* Asegura que la imagen se muestra como bloque y no afecta la disposición de otros elementos */
