@@ -43,6 +43,11 @@
         flex-direction: column;
       }
     }
+
+
+    /* Container y clases principales*/
+
+
     .container {  display: grid;   /* Config de Conteiner padre*/
       grid-template-columns: 1fr 1fr 0.7fr 1.3fr;
       grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
@@ -57,10 +62,18 @@
         "Footer Footer Footer Footer";
         gap: 12px 12px;
     }
+
+
     
     .Fila-Impar{
       padding-right: 10%;
     }
+
+    .Fila-Par{
+      padding-left: 10%;
+    }
+
+
 
     .Texto-1 {
       justify-self: center;
@@ -73,10 +86,12 @@
 
       /*background-color: rgb(114, 47, 55);*/
     }
+
     .Fila-2 {
       justify-self: end;
       grid-area: Fila-2;
     }
+
     
     .Texto-2 {
       justify-self: center;
@@ -88,11 +103,13 @@
 
     }
 
+
     .Fila-3 {
       justify-self: start;
       align-self: center;
       grid-area: Fila-3;
     }
+    
     
     .Texto-3 {
       justify-self: center;
@@ -101,8 +118,8 @@
       font-family: 'Cormorant', serif;
       text-align: center;
       vertical-align: middle;
-
     }
+
 
     .Fila-4 {
       object-fit: scale-down;
@@ -113,6 +130,7 @@
       grid-area: Fila-4;
     }
     
+
     .Texto-4 {
       justify-self: center;
       align-self: center;
@@ -123,6 +141,7 @@
 
     }
 
+
     .Footer {
       justify-self: center;
       align-self: center;
@@ -132,18 +151,27 @@
       vertical-align: middle;
     }
 
+
     .Fila-1 {
       justify-self: center;
       align-self: center;
       grid-area: Fila-1;          
     }
     
+
     .Header {
       justify-self: center;
       align-self: center;
       grid-area: Header;
     }
     
+
+
+
+
+
+/*Estilo particular de cada tipo de objeto dentro de la fila o clcase general*/
+
     /* Estilo del título */
     .Header h1{
       font-size: 2.5rem; /* Tamaño de fuente de 2.5 "rem" */
@@ -179,6 +207,13 @@
       display: block;
     }
 
+
+
+
+
+
+/* Genero todo lo que fue el toast*/
+
     .toast {
       position: fixed;
       bottom: 20px;
@@ -195,3 +230,82 @@
     .toast.show {
       display: block; /* Muestra la notificación cuando tiene la clase 'show' */
     }
+
+
+    /*Cosas Carrito*/
+
+
+    .carrito {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    
+    .lista-productos {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .lista-productos li {
+      margin-bottom: 10px;
+    }
+    
+    .agregar-carrito {
+      background-color: #4CAF50;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .agregar-carrito:hover {
+      background-color: #45a049;
+    }
+
+
+    /* Estilos para el botón del carrito */
+.carrito-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Estilos para la ventana del carrito */
+.carrito-ventana {
+  position: fixed;
+  top: 70px;
+  left: 10px;
+  width: 200px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  padding: 10px;
+  display: none;
+}
+
+.carrito-ventana ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carrito-ventana ul li {
+  margin-bottom: 10px;
+}
+
+.carrito-ventana p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.Footer {
+  text-align: center;
+  margin-top: 20px;
+}
+    
