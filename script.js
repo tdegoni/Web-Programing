@@ -1,18 +1,15 @@
-// Obtén la referencia al elemento de la notificación toast
-const toast = document.querySelector('.toast');
-
-// Muestra la notificación toast
-toast.classList.add('show');
-
-// Oculta la notificación después de 5 segundos
-setTimeout(function() {
-  toast.classList.remove('show');
-}, 5000);
-
-
-//Carrito
-
 document.addEventListener('DOMContentLoaded', function() {
+  // Obtén la referencia al elemento de la notificación toast
+  const toast = document.querySelector('.toast');
+
+  // Muestra la notificación toast
+  toast.classList.add('show');
+
+  // Oculta la notificación después de 5 segundos
+  setTimeout(function() {
+    toast.classList.remove('show');
+  }, 5000);
+
   // Obtener elementos
   var botonesAgregar = document.getElementsByClassName('agregar-carrito');
   var listaProductos = document.querySelector('.lista-productos');
@@ -28,6 +25,37 @@ document.addEventListener('DOMContentLoaded', function() {
       // Crear elemento de lista con el nombre y precio del producto
       var productoElemento = document.createElement('li');
       productoElemento.textContent = nombre + ' - $' + precio.toFixed(2);
+
+      // Crear botones de suma y resta
+      var botonSumar = document.createElement('button');
+      botonSumar.textContent = '+';
+      botonSumar.classList.add('sumar');
+      botonSumar.setAttribute('data-precio', precio); // Agregar atributo data-precio
+      botonSumar.addEventListener('click', function() {
+        // Obtener el precio del producto
+        var precio = parseFloat(this.getAttribute('data-precio'));
+        // Actualizar el total y el elemento de lista
+        total += precio;
+        totalElemento.textContent = total.toFixed(2);
+      });
+
+      var botonRestar = document.createElement('button');
+      botonRestar.textContent = '-';
+      botonRestar.classList.add('restar');
+      botonRestar.setAttribute('data-precio', precio); // Agregar atributo data-precio
+      botonRestar.addEventListener('click', function() {
+        // Obtener el precio del producto
+        var precio = parseFloat(this.getAttribute('data-precio'));
+        // Actualizar el total y el elemento de lista
+        total -= precio;
+        totalElemento.textContent = total.toFixed(2);
+      });
+
+      // Agregar los botones al elemento de lista
+      productoElemento.appendChild(botonSumar);
+      productoElemento.appendChild(botonRestar);
+
+      // Agregar el producto al carrito
       listaProductos.appendChild(productoElemento);
 
       // Actualizar el total
@@ -35,23 +63,21 @@ document.addEventListener('DOMContentLoaded', function() {
       totalElemento.textContent = total.toFixed(2);
     });
   }
-});
 
+  var carritoVisible = false;
 
-var carritoVisible = false;
+  function toggleCarrito() {
+    var ventana = document.getElementById('carritoVentana');
+    carritoVisible = !carritoVisible;
 
-function toggleCarrito() {
-  var ventana = document.getElementById('carritoVentana');
-  carritoVisible = !carritoVisible;
-  
-  if (carritoVisible) {
-    ventana.style.display = 'block';
-  } else {
-    ventana.style.display = 'none';
+    if (carritoVisible) {
+      ventana.style.display = 'block';
+    } else {
+      ventana.style.display = 'none';
+    }
   }
-}
 
-document.addEventListener('DOMContentLoaded', function() {
   var botonCarrito = document.getElementById('carritoBtn');
   botonCarrito.addEventListener('click', toggleCarrito);
 });
+  

@@ -6,41 +6,28 @@
       font-size: 20px;
     }
     @media only screen and (max-width: 600px) {
-      .fila {
-        width: 100%;
-        position: relative;
+      .Texto-1,
+      .Texto-2,
+      .Texto-3,
+      .Texto-4 {
+        text-align: center;
       }
-      .texto {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: none;
-      }
-      .fila:hover .texto {
-        display: block;
-      }
-      /*.container{ 
-        display: grid;   
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-        "Header"
-        "Fila-1"
-        "Texto-1"
-        "Texto-2"
-        "Fila-2"
-        "Fila-3"
-        "Texto-3"
-        "Texto-4"
-        "Fila-4"
-        "Footer";
-      }
-      */
-      .container{
+    
+      .Fila-1,
+      .Fila-2,
+      .Fila-3,
+      .Fila-4 {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .Fila-1 img,
+      .Fila-2 img,
+      .Fila-3 img,
+      .Fila-4 img {
+        width: 100%;
+        height: auto;
       }
     }
 
@@ -61,6 +48,7 @@
         "Texto-4 Fila-4 Fila-4 Fila-4"
         "Footer Footer Footer Footer";
         gap: 12px 12px;
+      
     }
 
 
@@ -232,6 +220,9 @@
     }
 
 
+
+
+
     /*Cosas Carrito*/
 
 
@@ -264,25 +255,40 @@
 
 
     /* Estilos para el botón del carrito */
-.carrito-btn {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  width: 50px;
-  height: 50px;
-  background-color: #ff0000;
-  color: #ffffff;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-}
+    .carrito-btn {
+      background-color: #45a049;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      color: white;
+    }
+    
+/*Me quedo con esta si encuentro una buena foto
+
+    .carrito-icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+*/
+    
 
 /* Estilos para la ventana del carrito */
 .carrito-ventana {
   position: fixed;
   top: 70px;
   left: 10px;
-  width: 200px;
+  width: 280px;
   background-color: #ffffff;
   border: 1px solid #000000;
   padding: 10px;
@@ -308,4 +314,10 @@
   text-align: center;
   margin-top: 20px;
 }
+
+.sumar,
+.restar {
+  margin-left: 10px;
+}
+
     
