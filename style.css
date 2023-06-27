@@ -299,12 +299,12 @@
     
 
 /* Estilos para la ventana del carrito */
-.carrito-ventana {
+.carritoVentana {
   position: fixed;
   top: 70px;
   left: 10px;
   width: 280px;
-  background-color: #ffffff;
+  background-color: rgb(87, 149, 90);
   border: 1px solid #000000;
   padding: 10px;
   display: none;

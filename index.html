@@ -132,14 +132,24 @@
 			
 
     <!-- Ventana del carrito -->
-<div id="carritoVentana" class="carrito-ventana">
-  <h2>Carrito de compras</h2>
-  <ul class="lista-productos"></ul>
-  <p>Total: $<span id="total">0.00</span></p>
-  <button id="finalizarCompraBtn">Finalizar compra</button>
-	<button id="vaciarCarritoBtn">Vaciar carrito</button>
-</div>
-
+		<div id="carritoVentana" style="display: none;">
+			<h2>Carrito de Compras</h2>
+			<table id="carritoTabla">
+				<thead>
+					<tr>
+						<th>Producto</th>
+						<th>Cantidad</th>
+						<th>Precio</th>
+						<th>Acciones</th>
+					</tr>
+				</thead>
+				<tbody class="lista-productos"></tbody>
+			</table>
+			<p>Total: $<span id="total">0.00</span></p>
+			<button id="finalizarCompraBtn">Finalizar Compra</button>
+			<button id="vaciarCarritoBtn">Vaciar Carrito</button>
+		</div>
+		
 		
 
       <!-- Notificación toast -->
