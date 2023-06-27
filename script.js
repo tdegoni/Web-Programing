@@ -100,4 +100,18 @@ document.addEventListener('DOMContentLoaded', function() {
       toast.classList.remove('show');
     }, 5000);
   });
+  
+  
+  var botonVaciarCarrito = document.getElementById('vaciarCarritoBtn');
+  botonVaciarCarrito.addEventListener('click', function() {
+    // Vaciar el carrito (eliminar todos los productos)
+    listaProductos.innerHTML = '';
+    // Reiniciar el total a 0
+    total = 0;
+    totalElemento.textContent = '0.00';
+    // Actualizar contador de productos a 0
+    var contadorProductos = document.getElementById('contadorProductos');
+    contadorProductos.textContent = '0';
+  });
+
 });
