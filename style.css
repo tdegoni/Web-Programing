@@ -267,6 +267,21 @@
       z-index: 9999;
       color: white;
     }
+
+    #contadorProductos {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      background-color: #ff0000;
+      color: #ffffff;
+      font-size: 12px;
+      border-radius: 50%;
+    }
     
 /*Me quedo con esta si encuentro una buena foto
 

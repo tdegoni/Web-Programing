@@ -127,16 +127,20 @@
 
       <!-- Botón del carrito -->
 			<button id="carritoBtn" class="carrito-btn">
-					Compra ya
+				Compra ya <span id="contadorProductos">0</span>
 			</button>
 			
 
     <!-- Ventana del carrito -->
-    <div class="carrito-ventana" id="carritoVentana">
-      <h2>Carrito de compras</h2>
-      <ul class="lista-productos" id="listaProductos"></ul>
-      <p>Total: $<span id="total">0.00</span></p>
-    </div>
+<div id="carritoVentana" class="carrito-ventana">
+  <h2>Carrito de compras</h2>
+  <ul class="lista-productos"></ul>
+  <p>Total: $<span id="total">0.00</span></p>
+  <button id="finalizarCompraBtn">Finalizar compra</button>
+  <button id="vaciarCarritoBtn">Vaciar carrito</button>
+</div>
+
+		
 
       <!-- Notificación toast -->
       <div class="toast">Sitio en mantenimiento</div>

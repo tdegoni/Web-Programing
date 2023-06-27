@@ -46,9 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
       botonRestar.addEventListener('click', function() {
         // Obtener el precio del producto
         var precio = parseFloat(this.getAttribute('data-precio'));
-        // Actualizar el total y el elemento de lista
-        total -= precio;
-        totalElemento.textContent = total.toFixed(2);
+        // Verificar si el total es mayor a 0 antes de restar
+        if (total > 0) {
+          // Actualizar el total y el elemento de lista
+          total -= precio;
+          totalElemento.textContent = total.toFixed(2);
+        }
       });
 
       // Agregar los botones al elemento de lista
@@ -69,15 +72,32 @@ document.addEventListener('DOMContentLoaded', function() {
   function toggleCarrito() {
     var ventana = document.getElementById('carritoVentana');
     carritoVisible = !carritoVisible;
-
+  
     if (carritoVisible) {
       ventana.style.display = 'block';
     } else {
       ventana.style.display = 'none';
     }
+  
+    // Actualizar contador de productos
+    var contadorProductos = document.getElementById('contadorProductos');
+    var cantidadProductos = listaProductos.childElementCount;
+    contadorProductos.textContent = cantidadProductos;
   }
+  
 
   var botonCarrito = document.getElementById('carritoBtn');
   botonCarrito.addEventListener('click', toggleCarrito);
+
+  var botonFinalizarCompra = document.getElementById('finalizarCompraBtn');
+  botonFinalizarCompra.addEventListener('click', function() {
+    // Mostrar la notificación toast
+    toast.textContent = '¡Felicidades! Su compra ha sido realizada con éxito.';
+    toast.classList.add('show');
+
+    // Ocultar la notificación después de 5 segundos
+    setTimeout(function() {
+      toast.classList.remove('show');
+    }, 5000);
+  });
 });
-  
